@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "957bdc6f-b887-44d4-a90d-a0d937b709ee",
+		"name": "product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "saveProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"lastUpdatedTime\": \"2022-09-11T19:19:24.406Z\",\r\n    \"productAvailability\": true,\r\n    \"productBrand\": \"prada\",\r\n    \"productCategory\": \"toy\",\r\n    \"productInfo\": \"blue color toy gun under 3 years \",\r\n    \"productName\": \"blue toy gun \",\r\n    \"productQnty\": 200,\r\n    \"productSubCategory\": \"toy\",\r\n    \"userID\": \"adrawal\",\r\n    \"productPrice\":20000\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/products/saveProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"products",
+						"saveProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/products/fetchProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"products",
+						"fetchProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchBasedonID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/products/fetchProduct/631f8422f857cb0ab495a9ef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"products",
+						"fetchProduct",
+						"631f8422f857cb0ab495a9ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchAllProductsBasedOnCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/products/fetchProductByCategory/Watch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"products",
+						"fetchProductByCategory",
+						"Watch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchAllCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/products/fetchProductCategories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"products",
+						"fetchProductCategories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProductByID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/products/deleteProduct?id=631f8422f857cb0ab495a9ef&id=631f8abff857cb0ab495a9f0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"products",
+						"deleteProduct"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "631f8422f857cb0ab495a9ef"
+						},
+						{
+							"key": "id",
+							"value": "631f8abff857cb0ab495a9f0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProductDetails",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastUpdatedTime\": \"2022-09-11T19:19:24.406Z\",\r\n    \"productAvailability\": true,\r\n    \"productBrand\": \"prada\",\r\n    \"productCategory\": \"toy\",\r\n    \"productInfo\": \"black color toy gun under 3 years \",\r\n    \"productName\": \"black toy gun \",\r\n    \"productQnty\": 200,\r\n    \"productSubCategory\": \"toy\",\r\n    \"userID\": \"adrawal\",\r\n    \"productPrice\":20000\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/products/updateProductDetails?id=6324b18b1d597503adef54fb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"products",
+						"updateProductDetails"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6324b18b1d597503adef54fb"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
